@@ -15,6 +15,7 @@ function frutas() {
     }
     return frutasAleatorias
 }
+
 function cacaPalavras() {
     let letra = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
     const space = document.createElement("br")
@@ -45,6 +46,9 @@ function cacaPalavras() {
         linha.classList.add("linha")
         for(j=0; j<10;j++){
             let letras = document.createElement('span')
+            letras.addEventListener("mousedown", function(event) {
+                letras.style.color = "#ffc6bf";
+            }, false)
             letras.classList.add("letras")
             letras.innerText = (matriz[i][j])
             linha.appendChild(letras)
